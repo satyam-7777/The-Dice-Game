@@ -1,4 +1,5 @@
 'use strict';
+const diceSound = new Audio('dice-sound.mp3');
 
 // element decaration
 let playerZeroTotalScore = document.getElementById('score--0');
@@ -46,6 +47,9 @@ let switchPlayers = function () {
 
 rollButton.addEventListener('click', function () {
   if (!gameWon) {
+    //diceSound
+    diceSound.currentTime = 0;
+    diceSound.play();
     // genrate random number
     let diceNumber = Math.trunc(Math.random() * 6) + 1;
     // show dice image based on the number
