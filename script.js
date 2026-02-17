@@ -75,7 +75,7 @@ holdButton.addEventListener('click', function () {
     // check if score is greater than equal to 100 for player to win
     if (totalScore[currentPlayerNumber] >= 10) {
       gameWon = true;
-      dice.classList.add('hidden');
+      // dice.classList.add('hidden');
       document
         .querySelector(`.player--${currentPlayerNumber}`)
         .classList.add('player--winner');
